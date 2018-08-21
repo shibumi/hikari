@@ -95,7 +95,6 @@ autoload -Uz compinit
 autoload insert-files
 
 # ZLEs
-zle -C hist-complete complete-word _generic
 zle -N insert-files
 
 # zstyles
@@ -385,7 +384,6 @@ bindkey '\e[1;5C' forward-word
 bindkey '\e[1;5D' backward-word
 bindkey '^[[A' up-line-or-search
 bindkey '^[[B' down-line-or-search
-bindkey "^xh" hist-complete
 bindkey "^xf" insert-files
 bindkey "^xd" insert-datestamp
 bindkey "^xs" sudo-command-line
