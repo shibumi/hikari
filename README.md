@@ -1,6 +1,8 @@
 # hikari-zsh
 Hikari ZSH - A pure and minimalistic zsh with special shortcuts
 
+![screenshot of hikari zsh](https://raw.githubusercontent.com/shibumi/hikari-zsh/master/screenshots/hikari1.png)
+
 ## Requirements
 * zsh
 * zsh-syntax-highlighting
