@@ -34,9 +34,6 @@ Checkout the `setopts` part in the `zshrc`. One of the best features:
 ### Insert the current date into the shell
 * Press `CTRL+x d` for inserting the current date
 [![asciicast](https://asciinema.org/a/Xwiwj2bFvq8wK14K5pd6UWSLP.png)](https://asciinema.org/a/Xwiwj2bFvq8wK14K5pd6UWSLP)
-### Complete filenames
-* Press `CTRL+x f` for completing filenames or just showing them
-[![asciicast](https://asciinema.org/a/unYZEfPPGY9lQdLYdn118nMGk.png)](https://asciinema.org/a/unYZEfPPGY9lQdLYdn118nMGk)
 ### jump after the first word to insert arguments
 * Press `CTRL+x 1` to jump behind the first word to insert additional arguments
 [![asciicast](https://asciinema.org/a/DUwbeOhCmLH60Ixqs1y3vyovB.png)](https://asciinema.org/a/DUwbeOhCmLH60Ixqs1y3vyovB)
