@@ -92,10 +92,6 @@ HISTFILE=~/.zsh_history
 autoload -Uz colors && colors
 autoload -Uz vcs_info
 autoload -Uz compinit
-autoload insert-files
-
-# ZLEs
-zle -N insert-files
 
 # zstyles
 zstyle ':completion:*' menu select
@@ -384,7 +380,6 @@ bindkey '\e[1;5C' forward-word
 bindkey '\e[1;5D' backward-word
 bindkey '^[[A' up-line-or-search
 bindkey '^[[B' down-line-or-search
-bindkey "^xf" insert-files
 bindkey "^xd" insert-datestamp
 bindkey "^xs" sudo-command-line
 bindkey "^x1" jump_after_first_word
