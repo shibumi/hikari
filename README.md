@@ -44,4 +44,7 @@ Checkout the `setopts` part in the `zshrc`. One of the best features:
 * Press `CTRL+w` to delete the whole last word
 [![asciicast](https://asciinema.org/a/5GRBxafdd68JaxcILppAnb5UW.png)](https://asciinema.org/a/5GRBxafdd68JaxcILppAnb5UW)
 
-### Additional grml features like up-line search
+### Additional grml features
+* upline search
+* interactive comments
+* ...

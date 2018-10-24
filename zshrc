@@ -80,6 +80,8 @@ setopt autopushd pushdminus pushdsilent pushdtohome
 setopt pushdignoredups
 # Shortcuts for directories e.g. hash -d
 setopt autocd
+# enable interactivecomments
+setopt interactivecomments
 # Disable flowcontrol
 stty -ixon
 
