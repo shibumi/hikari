@@ -1,6 +1,6 @@
 # hikari-zsh -  A pure and minimalistic zsh with special shortcuts
 #
-# Copyright (c) 2018 by Christian Rebischke <chris@nullday.de>
+# Copyright (c) 2019 by Christian Rebischke <chris@nullday.de>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -85,15 +85,17 @@ setopt interactivecomments
 # Disable flowcontrol
 stty -ixon
 
-# History Settings
-HISTSIZE=1000000
-SAVEHIST=9000000
-HISTFILE=~/.zsh_history
-
 # Autoload
 autoload -Uz colors && colors
 autoload -Uz vcs_info
 autoload -Uz compinit
+
+# History Settings
+HISTSIZE=1000000
+SAVEHIST=9000000
+HISTFILE=~/.zsh_history
+TIMEFMT="'$fg[green]%J$reset_color' time: $fg[blue]%*Es$reset_color, cpu: $fg[blue]%P$reset_color"
+REPORTTIME=10
 
 # zstyles
 zstyle ':completion:*' menu select
@@ -138,8 +140,8 @@ function grmlcomp () {
     # ignore duplicate entries
     zstyle ':completion:*:history-words'   remove-all-dups yes
     zstyle ':completion:*:history-words'   stop yes
-    # match uppercase from lowercase
-    zstyle ':completion:*'                 matcher-list 'm:{a-z}={A-Z}'
+    # match case insensitive
+    zstyle ':completion:*' matcher-list 'm:{a-zA-Z-_}={A-Za-z_-}' 'r:|=*' 'l:|=* r:|=*'
     # separate matches into groups
     zstyle ':completion:*:matches'         group 'yes'
     zstyle ':completion:*'                 group-name ''
@@ -372,7 +374,7 @@ prompt_git_dirty() {
 NEWLINE=$'\n'
 precmd() {
     vcs_info
-    FIRST_PROMPT="%(!.%F{red}root%f.%F{green}$USER%f) %F{$prompt_color}%m%f %F{$(prompt_dir_writeable)}%~%f %* %F{$(prompt_git_dirty)}${vcs_info_msg_0_}%f"
+    FIRST_PROMPT="%(!.%F{red}root%f.%F{green}$USER%f) %F{$prompt_color}%m%f %F{$(prompt_dir_writeable)}%~%f %* %F{$(prompt_git_dirty)}${vcs_info_msg_0_}%f %(1j.%j.)"
 }
 PROMPT='$FIRST_PROMPT${NEWLINE}%(?.%F{green}.%F{red})❯%f '
 
@@ -394,4 +396,3 @@ bindkey '\e[1;3C' forward-half-word
 
 # sources
 [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
