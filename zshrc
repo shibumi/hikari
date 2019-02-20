@@ -399,3 +399,6 @@ bindkey '\e[1;3C' forward-half-word
 
 # sources
 [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# load $HOME/.zshrc.local to overwrite this zshrc
+[[ -r ${HOME}/.zshrc.local ]] && source ${HOME}/.zshrc.local
