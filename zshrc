@@ -20,6 +20,9 @@
 # Email : chris@nullday.de
 # Github: www.github.com/Shibumi
 
+# load $HOME/.zshrc.pre to overwrite defaults
+[[ -r ${HOME}/.zshrc.pre ]] && source ${HOME}/.zshrc.pre
+
 # Colors in less
 export LESS_TERMCAP_mb=$'\E[01;31m'
 export LESS_TERMCAP_md=$'\E[01;31m'
