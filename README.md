@@ -5,8 +5,10 @@ Hikari ZSH - A pure and minimalistic zsh with special shortcuts
 
 ## Requirements
 * zsh
+
+## Optional Requirements
 * zsh-syntax-highlighting
-* fzf
+* skim
 
 ## Installation
 Just copy the `zshrc` file in your home or include it via `source <path to hikari zshrc file>`
