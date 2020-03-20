@@ -42,7 +42,7 @@ import it after hikari via `zshrc.local`.
 * Press `alt+left` or `alt+right` to jump between `/` in paths
 * Press `alt+backspace` to delete until next `/` in paths
 * Press `ctrl+w` to delete the whole last word
-# Copy the previous typed word
+### Copy the previous typed word
 * Press `ctrl+x c` for copying + inserting the last typed word
 ### skim shortcuts and completion features
 * Press `ctrl+t` for listing files and folders. For example: `nvim ctrl+t`
