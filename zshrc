@@ -346,7 +346,7 @@ zle -N jump_after_first_word
 if [[ ! -f ~/.zshcolor ]]; then
 	declare -a colors
 	colors=('cyan' 'green' 'yellow' 'magenta' 'red' 'blue')
-	host_hash=$(hostname | md5sum | tr -d '[a-fA-F]' | cut -d ' ' -f 1 | head -c 5)
+	host_hash=$(hostnamectl --static | md5sum | tr -d '[a-fA-F]' | cut -d ' ' -f 1 | head -c 5)
 	prompt_color=$colors[$((host_hash % ${#colors[@]} + 1))]
 	echo -n $prompt_color > ~/.zshcolor
 else
