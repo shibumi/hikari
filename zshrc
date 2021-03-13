@@ -341,6 +341,13 @@ function jump_after_first_word () {
 }
 zle -N jump_after_first_word
 
+# get last modified file
+function get-last-modified-file () {
+        LAST_FILE=$(\ls -t1p | grep -v / | head -1)
+        LBUFFER+=${(%):-$LAST_FILE}
+}
+zle -N get-last-modified-file
+
 # Custom Prompt
 
 if [[ ! -f ~/.zshcolor ]]; then
@@ -410,6 +417,7 @@ bindkey "^x'" toggleSingleString
 bindkey '^x"' toggleDoubleString
 bindkey '^x;' clearString
 bindkey '^xc' copy-prev-shell-word
+bindkey '^xl' get-last-modified-file
 bindkey '^[^?' backward-kill-dir
 bindkey '\e[1;3D' backward-half-word
 bindkey '\e[1;3C' forward-half-word

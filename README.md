@@ -44,6 +44,8 @@ import it after hikari via `zshrc.local`.
 * Press `ctrl+w` to delete the whole last word
 ### Copy the previous typed word
 * Press `ctrl+x c` for copying + inserting the last typed word
+### Get last modified file
+* Press `ctrl+x l` for printing the last modified file in the current directory
 ### skim shortcuts and completion features
 * Press `ctrl+t` for listing files and folders. For example: `nvim ctrl+t`
 * Press `ctrl+r` for fuzzy search history
