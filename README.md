@@ -1,6 +1,6 @@
 # hikari
 
-hikari is slick zsh configuration with special shortcuts.
+hikari is a slick zsh configuration with special shortcuts.
 
 ![screenshot of hikari zsh](https://raw.githubusercontent.com/shibumi/hikari-zsh/master/screenshots/hikari1.png)
 
