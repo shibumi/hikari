@@ -9,6 +9,17 @@ Hikari ZSH - A pure and minimalistic zsh with special shortcuts
 ## Optional Requirements
 * zsh-syntax-highlighting
 * skim
+* kubectx
+
+## Recordings
+
+### Basic features
+
+![basics](https://raw.githubusercontent.com/shibumi/hikari-zsh/master/recordings/basics.gif)
+
+### Advanced features
+
+![advanced](https://raw.githubusercontent.com/shibumi/hikari-zsh/master/recordings/advanced.gif)
 
 ## Installation
 Just copy the `zshrc` file in your home or include it via `source <path to hikari zshrc file>`
